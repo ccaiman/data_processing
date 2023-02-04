@@ -3,12 +3,12 @@ library(rlang)
 library(tidyverse)
 library(reshape2)
 library(ggthemes)
-library(rgdal) ##component segmentation
-library(spatstat) ##connect components
-library(nabor) ##3D nearest neighbor
+library(rgdal) 
+library(spatstat) 
+library(nabor) 
 
 ##A function, for images imaged at 40x obj, 3.5x digital zoom, 1-micron z-step size,
-##to compile puncta detected by SynapseJ v.1 (with positions)
+##to compile puncta detected by SynapseJ v.1
 
 ##input is the label of the image as a string
 ##the function can be itterated over a string vector using sapply()
@@ -37,8 +37,8 @@ library(nabor) ##3D nearest neighbor
 
 ##you need to know:
 ##1) microns per pixel for the images to be processed
-##2) the path to the detection tables from the SynapseJ macro
-##3) the path and name of the table containing nuclear locations for each inner hair cell
+##2) the file path to the detection tables from the SynapseJ macro
+##3) the file path and name of the table containing nuclear locations for each inner hair cell
 ##Step 3 was done separately by an observer
 ##using ImageJ Cell Counter to mark nuclei centroids
 
@@ -46,11 +46,11 @@ library(nabor) ##3D nearest neighbor
 puncta_per_hair_cell <- function(x){
   ##micron-to-pixel conversion factor
   mic_pix <- 0.0593047
-  ##path to SynapseJ detection tables
+  ##file path to SynapseJ detection tables
   path1 <- "demos/confocal image/"
-  ##path to the SynapseJ excel subfolder
+  ##file path to the SynapseJ excel subfolder
   path2 <- paste(path1, "excel/", sep = "")
-  ##path to tables with manual counts, such as inner hair cell nuclei locations per image
+  ##file path to tables with manual counts, such as inner hair cell nuclei locations per image
   path3 <- "demos/confocal image/"
   
   ##import data
