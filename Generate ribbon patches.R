@@ -27,7 +27,7 @@ library(rlang)
 ##the result is guided, manual counts
 
 ##in this script, you need to:
-##1)set the path to the tiffs which were processed by the SynapseJ algorithm
+##1)set the file path to the tiffs which were processed by the SynapseJ algorithm
 ##so this function can extract patches from the image
 ##2)set the micron-to-pixel conversion factor
 ##3)ensure there is a "patches" folder in your working directory, 
@@ -37,7 +37,7 @@ SynapseJ_patches <- function(x){
   
   ##micron-to-pixel conversion factor
   mic_pix <- 0.0593047
-  ##path to the image
+  ##file path to the image
   path = "demos/confocal image/"
   
   ##working with CtBP2 puncta detected by SynapseJ for all figures
