@@ -24,7 +24,7 @@ library(readxl)
 
 compile_phys <- function(x){
   
-  ##the path to auditory physiology data that has been post processed
+  ##the file path to auditory physiology data that has been post processed
   path <- "demos/physiology/"
   
   ##initials of the operator
